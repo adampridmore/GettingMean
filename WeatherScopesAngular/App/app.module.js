@@ -1,6 +1,8 @@
-﻿(function () {
-    'use strict';
+﻿angular.module('myApp', []);
 
-    angular.module('app', []);
+var myController = function() {
+};
 
-})();
+angular
+    .module('myApp')
+    .controller('myController', myController);

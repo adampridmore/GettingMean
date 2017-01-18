@@ -1,13 +1,13 @@
-﻿(function () {
-    'use strict';
+﻿//(function () {
+//    'use strict';
 
-    angular
-        .module('app')
-        .controller('Main', main);
+//    angular
+//        .module('app')
+//        .controller('Main', main);
 
-    function main() {
-        var vm = this;
-        vm.food = 'pizza';
-    }
+//    function main() {
+//        var vm = this;
+//        vm.food = 'pizza';
+//    }
 
-})();
+//})();
