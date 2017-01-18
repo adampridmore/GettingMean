@@ -1,17 +1,15 @@
 ﻿<!DOCTYPE html>
 
-<html ng-app="app">
+<html ng-app>
 <head>
-    <title>My App</title>
-</head>
-<body ng-controller="Main as vm">
-    <input type="text" ng-model="vm.food" placeholder="Enter food"/>
-
-    <p>Sriracha sauce is great with {{vm.food}}!</p>
-
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-    <script src="app/app.module.js"></script>
-    <script src="app/main.js"></script>
+    <title>My App</title>
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <input type="text" ng-model="myInput" placeholder="Enter something"/>
+
+    <p>Hello {{myInput}}!</p>
 
 </body>
 </html>
