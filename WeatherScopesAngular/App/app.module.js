@@ -8,17 +8,17 @@ var locationList = function($scope) {
     $scope.data = {
         locations: [
             {
-                name: 'Burger King',
+                name: "Burger King",
                 address: '125 High Street, Reading, RG6 1PS'
             }, {
-                name: 'Costy',
-                address: '7 Stanborough Road, Plymouth, PL9 8SP'
+                name: "Costy",
+                address: "7 Stanborough Road, Plymouth, PL9 8SP"
             }
         ]
     }
 }
 
 angular
-    .module('myApp')
-    .controller('myController', myController)
-    .controller('locationList', locationList);
+    .module("myApp")
+    .controller("myController", myController)
+    .controller("locationList", locationList);
