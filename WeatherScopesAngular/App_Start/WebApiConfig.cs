@@ -1,5 +1,7 @@
 ﻿using System.Net.Http.Headers;
 using System.Web.Http;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace WeatherScopesAngular
 {
@@ -18,8 +20,11 @@ namespace WeatherScopesAngular
                 defaults: new {id = RouteParameter.Optional}
             );
 
-            config.Formatters.JsonFormatter.SupportedMediaTypes
-                .Add(new MediaTypeHeaderValue("text/html"));
+            var jsonFormatter = config.Formatters.JsonFormatter;
+
+            jsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
+            jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            jsonFormatter.UseDataContractJsonSerializer = false;
         }
     }
 }

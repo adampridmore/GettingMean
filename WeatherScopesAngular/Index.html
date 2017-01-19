@@ -16,7 +16,9 @@
 </div>
 <div ng-controller="locationList">
     <ul>
-        <li ng-repeat="item in data.locations">{{ item.name }} ({{item.address}})</li>
+        <li ng-repeat="item in data.locations">
+            {{ item.name }} - ({{item.address}})
+        </li>
     </ul>
 </div>
 

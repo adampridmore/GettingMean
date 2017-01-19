@@ -4,18 +4,22 @@ var myController = function($scope) {
     $scope.myInput = "world!";
 };
 
-var locationList = function($scope) {
-    $scope.data = {
-        locations: [
-            {
-                name: "Burger King",
-                address: '125 High Street, Reading, RG6 1PS'
-            }, {
-                name: "Costy",
-                address: "7 Stanborough Road, Plymouth, PL9 8SP"
-            }
-        ]
-    }
+var locationList = function($scope, $http) {
+    $http.get("/api/AppData")
+        .then(function(response) {
+            $scope.data = {
+                locations: response.data
+            };
+        });
+
+    $scope.range = function(min, max, step) {
+        step = step || 1;
+        var input = [];
+        for (var i = min; i <= max; i += step) {
+            input.push(i);
+        }
+        return input;
+    };
 }
 
 angular
